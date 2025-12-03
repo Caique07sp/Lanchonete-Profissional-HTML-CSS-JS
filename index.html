@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">🍔 GrelhaBurguer</a>
+        
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#contato">Contato</a>
+            <a href="#cardapio" class="btn">Peça Agora</a>
+            
+        </nav>
+        
+        <!-- Botão hambúrguer -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <section id="home" class="hero-wrapper">
+        <article class="hero">
+            <div>
+                <h1>O melhor Hamburguer da Cidade</h1>
+                <p>Deliciosos hambúrgueres artesanais feitos com ingredientes frescos e de alta qualidade. Venha
+                    experimentar o sabor que conquista todos os paladares!</p>
+                <nav class="hero-buttons">
+                    <a id="#cardapio" class="btn">Ver Cardápio</a>
+                    <a href="https://wa.me/5519989469124" class="btn btn-outline">📞 WhatsApp</a>
+                </nav>
+
+                <ul class="hero-stats">
+                    <li>
+                        <strong>+500</strong>
+                        Clientes Felizes
+                    </li>
+                    <li>
+                        <strong>4.9</strong>
+                        Avaliação ⭐
+                    </li>
+                    <li>
+                        <strong>40min</strong>
+                        Tempo Médio de Entrega
+                    </li>
+                </ul>
+            </div>
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=999&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Hamburguer suculento com queijo derretido, alface, tomate e cebola roxa, servido em um pão artesanal com gergelim.">
+        </article>
+    </section>
+
+
+    <section id="cardapio" class="cardapio">
+        <h2>Nosso Cardapio</h2>
+
+        <p>Escolha o seu favorito e faça o pedido pelo WhatsApp</p>
+
+        <div class="filter-buttons">
+            <button class="filter-btn" data-category="mais-vendidos">🔥 Mais vendidos</button>
+            <button class="filter-btn" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="carne">Carne</button>
+            <button class="filter-btn" data-category="frango">Frango</button>
+            <button class="filter-btn" data-category="veggie">Veggie</button>
+            <button class="filter-btn" data-category="bebida">Bebidas</button>
+        </div>
+
+        <ul class="menu-grid">
+            <li class="menu-item" data-category="carne mais-vendidos">
+                <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhbWJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Hambúrguer Clássico com queijo, alface, tomate e cebola roxa">
+                <span class="badge">Mais vendido</span>
+                <h3>Hambúrguer Clássico</h3>
+                <p>Pão Brioche, 180g de carne, queijo cheddar, alface</p>
+                <strong>R$ 25,00</strong>
+                <a href="#" class="btn add-to-cart" data-name="Hambúrguer Clássico" data-price="25"
+                    data-category="carne">Adicionar</a>
+            </li>
+
+            <li class="menu-item" data-category="carne mais-vendidos">
+                <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGFtYnVyZ3VlcnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Hambúrguer BBQ com cebola caramelizada e bacon crocante">
+                <h3>Hambúrguer BBQ</h3>
+                <p>Pão Australiano, 200g de carne, queijo prato, cebola caramelizada</p>
+                <strong>R$ 30,00</strong>
+                <a href="#" class="btn add-to-cart" data-name="Hambúrguer BBQ" data-price="30"
+                    data-category="carne">Adicionar</a>
+            </li>
+
+            <li class="menu-item" data-category="veggie">
+                <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFtYnVyZ3VlcnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Hambúrguer Veggie com hambúrguer de grão-de-bico e legumes frescos">
+                <h3>Hambúrguer Veggie</h3>
+                <p>Pão Integral, hambúrguer de grão-de-bico, alface, tomate</p>
+                <strong>R$ 28,00</strong>
+                <a href="#" class="btn add-to-cart" data-name="Hambúrguer Veggie" data-price="28"
+                    data-category="veggie">Adicionar</a>
+            </li>
+
+            <li class="menu-item" data-category="frango">
+                <img src="https://images.unsplash.com/photo-1610970878459-a0e464d7592b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGFtYnVyZ3VlcnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Hambúrguer de Frango com maionese temperada e alface crocante">
+                <h3>Hambúrguer de Frango</h3>
+                <p>Pão de Milho, 180g de frango grelhado, maionese temperada</p>
+                <strong>R$ 27,00</strong>
+                <a href="#" class="btn add-to-cart" data-name="Hambúrguer de Frango" data-price="27"
+                    data-category="frango">Adicionar</a>
+            </li>
+
+            <li class="menu-item" data-category="carne">
+                <img src="..." alt="Hambúrguer Clássico">
+                <h3>Hambúrguer Clássico</h3>
+                <p>Pão Brioche, 180g de carne, queijo cheddar, alface</p>
+                <strong>R$ 25,00</strong>
+                <a href="#" class="btn add-to-cart" data-name="Hambúrguer Clássico" data-price="25"
+                    data-category="carne">Adicionar</a>
+            </li>
+
+            <li class="menu-item" data-category="frango">
+                <img src="..." alt="Hambúrguer de Frango">
+                <h3>Hambúrguer de Frango</h3>
+                <p>Pão de Milho, frango grelhado, maionese temperada</p>
+                <strong>R$ 27,00</strong>
+                <a href="#" class="btn add-to-cart" data-name="Hambúrguer de Frango" data-price="27"
+                    data-category="frango">Adicionar</a>
+            </li>
+
+            <li class="menu-item" data-category="veggie">
+                <img src="..." alt="Hambúrguer Veggie">
+                <h3>Hambúrguer Veggie</h3>
+                <p>Pão Integral, hambúrguer de grão-de-bico, alface, tomate</p>
+                <strong>R$ 28,00</strong>
+                <a href="#" class="btn add-to-cart" data-name="Hambúrguer Veggie" data-price="28"
+                    data-category="veggie">Adicionar</a>
+            </li>
+
+            <li class="menu-item" data-category="bebida mais-vendidos">
+                <img src="..." alt="Coca-Cola">
+                <h3>Coca-Cola</h3>
+                <p>Lata 350ml bem gelada</p>
+                <strong>R$ 6,00</strong>
+                <a href="#" class="btn add-to-cart" data-name="Coca-Cola" data-price="6"
+                    data-category="bebida">Adicionar</a>
+            </li>
+        </ul>
+
+    </section>
+    <!-- Alert estilizado -->
+    <div id="custom-alert">
+        <div class="alert-box">
+            <h3>Finalize seu pedido</h3>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Seu nome" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" placeholder="Rua, número, bairro" required>
+
+            <label for="pagamento">Forma de pagamento:</label>
+            <select id="pagamento" required>
+                <option value="">Selecione...</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Cartão">Cartão</option>
+                <option value="Pix">Pix</option>
+            </select>
+
+            <div class="alert-actions">
+                <button id="cancel-order" class="btn">Cancelar</button>
+                <button id="send-order" class="btn">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="custom-alert">
+        <div class="alert-box">
+            <h3>Finalize seu pedido</h3>
+
+            <!-- Resumo do pedido -->
+            <div id="order-summary"></div>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Seu nome" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" placeholder="Rua, número, bairro" required>
+
+            <label for="pagamento">Forma de pagamento:</label>
+            <select id="pagamento" required>
+                <option value="">Selecione...</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Cartão">Cartão</option>
+                <option value="Pix">Pix</option>
+            </select>
+
+            <div class="alert-actions">
+                <button id="cancel-order" class="btn">Cancelar</button>
+                <button id="send-order" class="btn">Enviar</button>
+            </div>
+        </div>
+    </div>
+   <section id="sobre" class="sobre">
+    <img src="https://plus.unsplash.com/premium_photo-1687697861242-03e99059e833?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2hlZnxlbnwwfHwwfHx8MA%3D%3D"
+        alt="Nossa equipe preparando hambúrgueres artesanais na cozinha da hamburgueria.">
+
+    <article>
+        <h2>Sobre Nós</h2>
+        <p>
+            Na GrelhaBurguer, nossa paixão é criar hambúrgueres artesanais que proporcionam uma experiência
+            gastronômica única. Utilizamos apenas ingredientes frescos e de alta qualidade para garantir o sabor
+            incomparável de cada mordida. Nossa equipe dedicada trabalha com carinho para preparar cada hambúrguer
+            com perfeição, desde a seleção da carne até a montagem final. Venha nos visitar e descubra por que
+            somos a escolha favorita dos amantes de hambúrgueres na cidade!
+        </p>
+
+        <ul>
+            <li>🥩 <strong>Carne Fresca</strong> - 100% bovina selecionada</li>
+            <li>🍔 <strong>Pagamento Fácil</strong> - Pix, cartão ou dinheiro</li>
+            <li>🚚 <strong>Entrega Rápida</strong> - Direto na sua porta</li>
+        </ul>
+
+        <!-- Ícone do Instagram -->
+        <p class="cta-instagram">
+            👉 Venha nos conhecer e veja mais no nosso 
+            <a href="https://www.instagram.com/seuinstagram" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i> @GrelhaBurguer
+            </a>
+        </p>
+
+    </article>
+</section>
+
+    <section id="cta" class="cta">
+        <h2>Bateu a fome?</h2>
+        <p>Faça seu pedido agora e receba em casa</p>
+        <a href="https://wa.me/5519989469124" class="btn btn-light">Pedir pelo WhatsApp 📞</a>
+    </section>
+
+    <footer id="contato">
+        <section>
+            <h3>
+                GrelhaBurguer 🍔
+            </h3>
+            <p>
+                O melhor hambúrguer artesanal da cidade. Siga-nos nas redes sociais e faça seu pedido pelo WhatsApp!
+            </p>
+        </section>
+
+        <section>
+            <h4>
+                Horário de Funcionamento
+            </h4>
+            <p>
+                Segunda a Domingo: 11:00 - 23:00
+            </p>
+        </section>
+
+        <section>
+            <h4>
+                Contato
+            </h4>
+            <p>
+                📞 (19) 98567-5124
+                📍Rua dos Hamburgueres, 123
+            </p>
+        </section>
+
+        <section>
+            <h4>
+                Redes Sociais
+            </h4>
+            <nav class="footer-links">
+                <a href="https://www.instagram.com/seuinstagram" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i> @GrelhaBurguer
+                </a>
+            </nav>
+
+        </section>
+
+
+        <p>
+            <a href="/politica-cookies.html" target="_blank" class="footer-link">Política de Cookies</a>
+        </p>
+
+        <p class="copy">&copy;2025 - GrelhaBurguer</p>
+
+
+    </footer>
+
+    <aside id="cart">
+        <h3>Carrinho</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: R$ <span id="cart-total">0,00</span></p>
+        <button id="checkout" class="btn">Finalizar Pedido</button>
+        <button id="close-cart" class="btn btn-outline">Fechar</button>
+    </aside>
+    <div id="cart-overlay"></div>
+
+
+
+    <!-- Ícone fixo do carrinho -->
+    <div id="cart-icon">
+        🛒 <span id="cart-count">0</span>
+    </div>
+
+
+    <!-- Container para notificações -->
+    <div id="toast-container"></div>
+
+    <div id="cookie-banner">
+        <div id="cookie-banner">
+            <p>
+                🍪 Este site usa cookies para melhorar sua experiência.
+                Ao continuar navegando, você concorda com nossa política.
+                <a href="/politica-cookies.html" target="_blank" class="link">Saiba mais</a>
+            </p>
+            <button id="accept-cookies" class="btn">Aceitar</button>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
